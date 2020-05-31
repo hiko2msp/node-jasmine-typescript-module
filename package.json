@@ -1,14 +1,19 @@
 {
     "private": true,
-    "name": "test-jasmine-typescript",
-    "version": "2.0.0",
+    "name": "sample",
+    "version": "1.0.0",
     "scripts": {
         "clear": "rm -rf dist/ coverage/ .nyc_output/",
         "clear:all": "rm -rf node_modules/ npm-debug.log && npm run clear",
         "test": "jasmine --reporter=jasmine-console-reporter --config=jasmine.json",
         "coverage": "nyc npm run test && nyc report --reporter=html",
-        "coveralls": "nyc npm run test && nyc report --reporter=text-lcov | coveralls -v"
+        "coveralls": "nyc npm run test && nyc report --reporter=text-lcov | coveralls -v",
+        "build": "tsc"
     },
+    "main": "dist/index.js",
+    "files": [
+        "dist"
+    ],
     "devDependencies": {
         "@types/jasmine": "^3.3.12",
         "@types/node": "^11.13.4",

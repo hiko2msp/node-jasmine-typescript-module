@@ -9,6 +9,14 @@
         "removeComments": false,
         "noImplicitAny": true,
         "suppressImplicitAnyIndexErrors": true,
-        "allowJs": true
-    }
+        "declaration": true,
+        "outDir": "dist"
+    },
+    "include": [
+        "src/**/*" 
+    ],
+    "exclude": [
+        "**/*.spec.ts",
+        "node_modules"
+    ]
 }
